@@ -2,17 +2,17 @@
   "animals": [
     {
       "id": 1,
-      "name": "piggyaaaaaaa",
-      "color": "yellowfffsss14"
+      "name": "pig",
+      "color": "yellow"
     },
     {
-      "name": "sfasf",
-      "color": "sfsdf",
+      "name": "dog",
+      "color": "black",
       "id": 2
     },
     {
-      "name": "dfdfdqưeqưe",
-      "color": "wèwèwèwfáđá",
+      "name": "kangaroo",
+      "color": "blue",
       "id": 3
     }
   ]
