@@ -1,0 +1,26 @@
+<div class="container">
+        <a name="" id="" class="btn btn-primary" routerLink="/add" role="button">Add</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Number</th>
+            <th>Author</th>
+            <th>Number</th>
+            <th>Modified Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td scope="row" >{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.number}}</td>
+            <td>{{book.date.day}}-{{book.date.month}}-{{book.date.year}}</td>
+            <!-- <td><a name="" id="" class="btn btn-danger"   (click)="deletePet(pet.id)" role="button">Delete</a><a name="" id="" class="btn btn-info" routerLink="/detail/{{pet.id}}" role="button">Edit</a></td> -->
+        </tr>
+ 
+    </tbody>
+</table>
+
+</div>
