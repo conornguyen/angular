@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>author</th>
+            <th>numbers</th>
+            <th>date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let book of books">
+            <td scope="row" >{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.number}}</td>
+            <td>{{book.date}}</td>
+            <td><a name="" id="" class="btn btn-danger"   (click)="deletePet(pet.id)" role="button">Delete</a><a name="" id="" class="btn btn-info" routerLink="/detail/{{pet.id}}" role="button">Edit</a></td>
+        </tr>
+ 
+    </tbody>
+</table>

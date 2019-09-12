@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import {Pet} from './pet';
+
 import { Observable, of  } from 'rxjs';
 
 
@@ -12,9 +12,9 @@ export class PetService {
 
   private petUrl = 'http://localhost:3000/animals'
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
+  // httpOptions = {
+  //   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  // };
 
   constructor(private http: HttpClient) { }
 
