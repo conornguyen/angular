@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
-import { Observable } from 'rxjs';
 import { Book } from '../book';
 
 @Component({
@@ -9,16 +8,19 @@ import { Book } from '../book';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
-  books: Book[]
+  books: Book[];
 
   constructor(
-    private bookService: BookService
-  ) { }
+    private bookService: BookService  ) { }
 
   ngOnInit() {
-
+    this.getBooks();
   }
 
+  getBooks(): void{
+    this.bookService.getBooks()
+    .subscribe(books => this.books = books)
+  }
   
 
 }
