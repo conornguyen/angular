@@ -13,19 +13,31 @@ import { Observable } from 'rxjs';
 })
 export class BookListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'title', 'author', 'number', 'action']
+ 
+  public displayedColumns = ['id', 'title', 'author', 'number', 'action' ];
 
-
-  dataSource = new MatTableDataSource(this.bookService.getBooks());
+  dataSource = new MatTableDataSource<any>();
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
+  
   constructor(
-    private bookService: BookService) { }
+    private bookService: BookService) {
+  }
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
+ 
+  this.dataSource.sort = this.sort;
+  this.loadBooks();
   }
+
+  loadBooks() {
+    return this.bookService.getBooks().subscribe((data) => {
+      this.dataSource.data = data ;
+      console.log(this.dataSource)
+    })
+  }
+
 
 
 

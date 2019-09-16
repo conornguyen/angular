@@ -1,59 +1,36 @@
-<!-- <table matSort (matSortChange)="sortData($event)">
-
-    <tr>
-        <th mat-sort-header="id">Number</th>
-        <th mat-sort-header="title">Name</th>
-        <th mat-sort-header="author">author</th>
-        <th mat-sort-header="number">numbers</th>
-        <th>date</th>
-    </tr>
 
 
-    <tr *ngFor="let book of books">
-        <td scope="row">{{book.id}}</td>
-        <td>{{book.title}}</td>
-        <td>{{book.author}}</td>
-        <td>{{book.number}}</td>
-        <td>{{book.date | json}}</td>
-        <td><a name="" id="" class="btn btn-danger" (click)="deleteBook(book.id)" role="button" mat-raised-button
-                color="warn">Delete</a><a name="" id="" class="btn btn-info" routerLink="../detail/{{book.id}}"
-                role="button" mat-raised-button color="accent">Edit</a></td>
-    </tr>
-
-
-</table> -->
-
-<table mat-table  [dataSource]="dataSource" matSort>
+<table mat-table   [dataSource]="dataSource" matSort>
     <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
-        <td mat-cell *matCellDef="let book"> {{book.id}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> title</th>
-        <td mat-cell *matCellDef="let book"> {{book.title }} </td>
+        <td mat-cell *matCellDef="let element"> {{element.title }} </td>
     </ng-container>
 
     <ng-container matColumnDef="author">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> author </th>
-        <td mat-cell *matCellDef="let book"> {{book.author}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.author}} </td>
     </ng-container>
 
     <ng-container matColumnDef="number">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> number </th>
-        <td mat-cell *matCellDef="let book"> {{book.number}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.number}} </td>
     </ng-container>
     <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
-        <td mat-cell *matCellDef="let book"> <a name="" id="" class="btn btn-danger" (click)="deleteBook(book.id)"
+        <td mat-cell *matCellDef="let element"> <a name="" id="" class="btn btn-danger" (click)="deleteBook(element.id)"
                 role="button" mat-raised-button color="warn">Delete</a><a name="" id="" class="btn btn-info"
-                routerLink="../detail/{{book.id}}" role="button" mat-raised-button color="accent">Edit</a> </td>
+                routerLink="../detail/{{element.id}}" role="button" mat-raised-button color="accent">Edit</a> </td>
     </ng-container>
 
 
-
+  
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+</table> 
