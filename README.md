@@ -2,7 +2,7 @@
 
 
 #terminal:
-cd my-app
+cd book-app
 
 
 #install json-server
