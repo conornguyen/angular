@@ -2,8 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { BookService } from '../book.service';
 import { Book } from '../book';
 import { MatSort, MatTableDataSource } from '@angular/material'
-import { DataSource } from '@angular/cdk/table';
-import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -16,7 +15,7 @@ export class BookListComponent implements OnInit {
  
   public displayedColumns = ['id', 'title', 'author', 'number', 'action' ];
 
-  dataSource = new MatTableDataSource<any>();
+  dataSource = new MatTableDataSource<Book>();
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
@@ -32,7 +31,7 @@ export class BookListComponent implements OnInit {
   }
 
   loadBooks() {
-    return this.bookService.getBooks().subscribe((data) => {
+    return this.bookService.getBooks().subscribe(data => {
       this.dataSource.data = data ;
       console.log(this.dataSource)
     })

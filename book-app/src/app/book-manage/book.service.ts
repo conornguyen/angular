@@ -16,21 +16,16 @@ export class BookService {
   constructor(private http: HttpClient) { }
 
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }
+  // httpOptions = {
+  //   headers: new HttpHeaders({
+  //     'Content-Type': 'application/json'
+  //   })
+  // }
   getBooks(): Observable<any> {
     return this.http.get<any>(this.booksUrl);
   }
 
 
-
-
-  // getBooks() {
-  //   return ALL_BOOKS;
-  // }
 
 
 }
