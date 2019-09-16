@@ -10,7 +10,7 @@ cd my-app
 npm install -g json-server
 
 # start json-server
-json-server --watch animals.json
+json-server --watch books.json
 
 
 
