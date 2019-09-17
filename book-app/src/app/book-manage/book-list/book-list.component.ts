@@ -15,7 +15,7 @@ export class BookListComponent implements OnInit {
  
   public displayedColumns = ['id', 'title', 'author', 'number', 'action' ];
 
-  dataSource = new MatTableDataSource<Book>();
+  dataSource = new MatTableDataSource();
 
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 

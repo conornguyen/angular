@@ -1,0 +1,41 @@
+<form [formGroup]="bookForm" autocomplete="off" novalidate (ngSubmit)="onSubmit()" 
+    fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px" class="example-form">
+    <mat-card-content>
+
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Book's title" formControlName="title" id="title">
+
+            <mat-error *ngIf="hasError('title', 'required')">Name is required</mat-error>
+            <!-- <mat-error *ngIf="hasError('title', 'maxlength')">You have more than 60 characters</mat-error> -->
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Author's name" formControlName="author" id="author">
+
+            <mat-error *ngIf="hasError('author', 'required')">Name is required</mat-error>
+            <!-- <mat-error *ngIf="hasError('name', 'maxlength')">You have more than 60 characters</mat-error> -->
+        </mat-form-field>
+
+
+
+        <!-- <mat-form-field>
+            <input matInput type="text" placeholder="Owner's address" formControlName="address">
+
+            <mat-error *ngIf="hasError('address', 'required')">Address is required</mat-error>
+            <mat-error *ngIf="hasError('address', 'maxlength')">You have more than 100 characters</mat-error>
+        </mat-form-field> -->
+
+        <!-- <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date of birth" formControlName="dateOfBirth"
+                id="dateOfBirth" readonly (click)="picker.open()">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+    </mat-card-content>
+    <mat-card-actions>
+            <mat-card-actions align="center">
+                <button mat-raised-button color="primary" type="submit">Create</button>
+                <button type="button" mat-raised-button color="warn" (click)="goBack()">Cancel</button>
+            </mat-card-actions>
+        </mat-card-actions>
+</form>
