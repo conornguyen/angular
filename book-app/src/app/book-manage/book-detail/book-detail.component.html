@@ -1,13 +1,13 @@
 <div class="" *ngIf="book">
     <h3>{{book.title }} Details</h3>
-    <div class="">{{book.id}}</div>
-    <div class="">{{book.author}}</div>
-    <div class="">{{book.number}}</div>
-    <div class="">{{book.date | date:'yyyy-MM-dd'}}</div>
+    <div class="">Id: {{book.id}}</div>
+    <div class="">Author: {{book.author}}</div>
+    <div class="">Number: {{book.number}}</div>
+    <div class="">Date: {{book.date | date:'yyyy-MM-dd'}}</div>
 </div>
 
 
-
+<h1>Edit Form</h1>
 
 <div [hidden]="submitted" *ngIf="book">
 
