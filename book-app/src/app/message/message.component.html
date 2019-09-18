@@ -1,0 +1,7 @@
+<div class="warning-message" *ngIf="messageService.getCurrentMessage()">
+    <div class="warning-message-bgr">
+      <div class="warning-message-title">{{messageService.getCurrentMessage().messageType}} <span class="message-close" (click)="removeMessage()">X</span></div>
+      <div class="warning-message-content">{{messageService.getCurrentMessage().messageDisplay}}</div>
+    </div>
+  </div>
+  

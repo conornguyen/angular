@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ManageRoutingModule } from './manage-routing.module';
 import { ManageComponent } from './manage.component';
+import { MaterialModule } from '../material/material.module';
 
 
 @NgModule({
   declarations: [ManageComponent],
   imports: [
     CommonModule,
-    ManageRoutingModule
+    ManageRoutingModule,
+    MaterialModule
   ]
 })
 export class ManageModule { }

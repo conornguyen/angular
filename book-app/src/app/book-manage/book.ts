@@ -3,9 +3,5 @@ export class Book {
     title: string;
     author: string;
     number: number;
-    date: {
-        day: number,
-        month: number,
-        year: number,
-    }
+    date: Date
 }

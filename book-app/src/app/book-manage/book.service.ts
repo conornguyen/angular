@@ -33,6 +33,15 @@ export class BookService {
     return this.http.post(this.booksUrl, book);
   }
 
+  updateBook(id: number, value: any): Observable<Object> {
+    return this.http.put(this.booksUrl + id, value);
+  }
+
+
+  deleteBook(id: number): Observable<any> {
+    return this.http.delete(this.booksUrl+ id);
+  }
+
 
 
 }

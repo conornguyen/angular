@@ -3,14 +3,8 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { Location } from '@angular/common';
 import { BookService } from '../book.service';
 import { Book } from '../book';
+import { MessageService } from 'src/app/message/message.service';
 
-
-
-
-export interface BookForCreation {
-  title: string;
-  author: string;
-}
 
 
 @Component({
@@ -25,11 +19,11 @@ export class BookCreateComponent implements OnInit {
 
 
 
-  constructor(private location: Location, private formBuilder: FormBuilder,
+  constructor(private location: Location, private formBuilder: FormBuilder, private messageService: MessageService,
     private bookService: BookService) { }
 
   ngOnInit() {
-    this.createForm();  
+    this.createForm();
   }
   public hasError = (controlName: string, errorName: string) => {
     return this.bookForm.controls[controlName].hasError(errorName);
@@ -41,21 +35,19 @@ export class BookCreateComponent implements OnInit {
 
   createForm() {
     this.bookForm = this.formBuilder.group({
-
       title: ['', Validators.required],
       author: ['', Validators.required],
+      date:['', Validators.required ]
     });
   }
 
-  
 
 
-  onSubmit() {
+  onSubmit(): void {
     this.submitted = true;
-    console.log(this.bookForm.value);
+    console.log(this.bookForm)
+    this.bookService.createBook(this.bookForm.value).subscribe();
+    this.messageService.addMessage({messageType: "success", messageDisplay: "Create Book Successful.!!!"});
   }
-
-
-
 
 }

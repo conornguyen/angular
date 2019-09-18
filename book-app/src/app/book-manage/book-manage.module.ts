@@ -9,8 +9,10 @@ import { BookCreateComponent } from './book-create/book-create.component';
 import { BookDefaultComponent } from './book-default/book-default.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
+
 @NgModule({
-  declarations: [BookListComponent, BookDetailComponent, BookCreateComponent, BookDefaultComponent],
+  declarations: [BookListComponent, BookDetailComponent, BookCreateComponent, BookDefaultComponent,],
   imports: [
     CommonModule,
     BookManageRoutingModule,
