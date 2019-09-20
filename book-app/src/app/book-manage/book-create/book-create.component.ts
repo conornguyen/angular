@@ -15,9 +15,7 @@ import { MessageService } from 'src/app/message/message.service';
 export class BookCreateComponent implements OnInit {
   public bookForm: FormGroup;
   submitted = false;
-  book: Book = new Book();
-
-
+  // book: Book = new Book();
 
   constructor(private location: Location, private formBuilder: FormBuilder, private messageService: MessageService,
     private bookService: BookService) { }
@@ -37,16 +35,18 @@ export class BookCreateComponent implements OnInit {
     this.bookForm = this.formBuilder.group({
       title: ['', Validators.required],
       author: ['', Validators.required],
-      date:['', Validators.required ]
+      date:['', Validators.required ],
+      number: []
     });
   }
 
 
-
   onSubmit(): void {
     this.submitted = true;
-    console.log(this.bookForm)
-    this.bookService.createBook(this.bookForm.value).subscribe();
+    this.bookService.createBook(this.bookForm.value).subscribe(data => {
+      this.location.back();
+    }
+    );
     this.messageService.addMessage({messageType: "success", messageDisplay: "Create Book Successful.!!!"});
   }
 

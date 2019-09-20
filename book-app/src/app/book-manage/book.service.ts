@@ -29,7 +29,7 @@ export class BookService {
     return this.http.get<any>(this.booksUrl + id)
   }
 
-  createBook(book: Object): Observable<Object> {
+  createBook(book: Book): Observable<any> {
     return this.http.post(this.booksUrl, book);
   }
 
@@ -39,7 +39,7 @@ export class BookService {
 
 
   deleteBook(id: number): Observable<any> {
-    return this.http.delete(this.booksUrl+ id);
+    return this.http.delete(this.booksUrl + id);
   }
 
 

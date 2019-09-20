@@ -7,6 +7,7 @@ const routes: Routes = [{
   path: '', component: ManageComponent,
   children: [
     { path: 'book-manage', loadChildren: () => import('../book-manage/book-manage.module').then(m => m.BookManageModule) },
+    { path: 'license-manage', loadChildren: () => import('../license-manage/license-manage.module').then(m => m.LicenseManageModule) },
   ]
 }];
 
