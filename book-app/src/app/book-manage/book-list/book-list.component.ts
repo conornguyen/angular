@@ -44,7 +44,9 @@ export class BookListComponent implements OnInit {
 
   deleteBook(id: number) {
     return this.bookService.deleteBook(id).subscribe(
+      
       list =>{
+
         this.loadBooks();
         this.messageService.addMessage({messageType: "success", messageDisplay: "Delete Book Successful.!!!"})
       }

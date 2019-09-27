@@ -1,0 +1,13 @@
+<p>license-detail works!</p>
+
+
+
+<div class="" *ngIf="license"  >
+    <h3>{{license.title }} Details</h3>
+    <div class="">Id: {{license.id}}</div>
+    <div class="">Book: {{license.book}}</div>
+    <div class="">Number: {{license.number}}</div>
+    <div class="">From: {{license.from | date:'yyyy-MM-dd'}}</div>
+    <div class="">To: {{license.to | date:'yyyy-MM-dd'}}</div>
+
+</div>

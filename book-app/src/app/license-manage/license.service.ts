@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
+import { License } from './license';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 export class LicenseService {
 
 
-  booksUrl = 'http://localhost:3000/books/'
+  licensesUrl = 'http://localhost:3000/license/'
   constructor(private http: HttpClient) { }
 
 
@@ -17,17 +19,17 @@ export class LicenseService {
   //     'Content-Type': 'application/json'
   //   })
   // }
-  // getBooks(): Observable<any> {
-  //   return this.http.get<any>(this.booksUrl);
-  // }
+  getLicenses(): Observable<any> {
+    return this.http.get<any>(this.licensesUrl);
+  }
 
-  // getBook(id: number): Observable<any>{
-  //   return this.http.get<any>(this.booksUrl + id)
-  // }
+  getLicense(id: number): Observable<any>{
+    return this.http.get<any>(this.licensesUrl + id)
+  }
 
-  // createBook(book: Book): Observable<any> {
-  //   return this.http.post(this.booksUrl, book);
-  // }
+  createLicense(license: License): Observable<any> {
+    return this.http.post(this.licensesUrl, license);
+  }
 
   // updateBook(id: number, value: any): Observable<Object> {
   //   return this.http.put(this.booksUrl + id, value);

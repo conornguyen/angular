@@ -1,42 +1,7 @@
 {
   "books": [
     {
-      "title": "Dadadafsdfwef",
-      "author": "dudududuwefwefsf",
-      "date": "2019-09-22T17:00:00.000Z",
-      "number": "33",
-      "id": 1
-    },
-    {
-      "title": "dfsdf",
-      "author": "ffferwer",
-      "date": "2019-09-17T17:00:00.000Z",
-      "number": "9",
-      "id": 2
-    },
-    {
-      "title": "wetwertdfgdfg",
-      "author": "yuighgfhfghf",
-      "date": "2019-09-22T17:00:00.000Z",
-      "number": "6",
-      "id": 3
-    },
-    {
-      "title": "6565d4ffe",
-      "author": "qwqwsdfsf6566fw",
-      "date": "2019-09-27T17:00:00.000Z",
-      "number": "5",
-      "id": 4
-    },
-    {
-      "title": "opoipkl;k;kcvx",
-      "author": "d65464ududusdfsdfsdu",
-      "date": "2019-09-19T17:00:00.000Z",
-      "number": "2",
-      "id": 5
-    },
-    {
-      "title": "fewewsdf",
+      "title": "Ong lao danh ca va con ca vang",
       "author": "qwerqweq",
       "date": "2019-09-17T17:00:00.000Z",
       "number": "9",
@@ -69,6 +34,99 @@
       "date": "2019-09-25T17:00:00.000Z",
       "number": "12",
       "id": 11
+    }
+  ],
+  "license": [
+    {
+      "id": 1,
+      "book": "",
+      "number": 4,
+      "from": "2019-09-25T17:00:00.000Z",
+      "to": "2019-09-25T17:00:00.000Z"
+    },
+    {
+      "id": 1,
+      "book": "",
+      "number": 4,
+      "from": "2019-09-25T17:00:00.000Z",
+      "to": "2019-09-25T17:00:00.000Z"
+    },
+    {
+      "id": 1,
+      "book": "",
+      "number": 4,
+      "from": "2019-09-25T17:00:00.000Z",
+      "to": "2019-09-25T17:00:00.000Z"
+    },
+    {
+      "id": 1,
+      "book": "",
+      "number": 4,
+      "from": "2019-09-25T17:00:00.000Z",
+      "to": "2019-09-25T17:00:00.000Z"
+    },
+    {
+      "id": 1,
+      "book": "",
+      "number": 4,
+      "from": "2019-09-25T17:00:00.000Z",
+      "to": "2019-09-25T17:00:00.000Z"
+    },
+    {
+      "id": 1,
+      "book": "",
+      "number": 4,
+      "from": "2019-09-25T17:00:00.000Z",
+      "to": "2019-09-25T17:00:00.000Z"
+    },
+    {
+      "name": "option1",
+      "author": "asa",
+      "date": "2019-09-01T17:00:00.000Z",
+      "number": "sa",
+      "id": 2
+    },
+    {
+      "name": "option1",
+      "number": "sd",
+      "from": "2019-09-02T17:00:00.000Z",
+      "to": "2019-09-01T17:00:00.000Z",
+      "id": 3
+    },
+    {
+      "book": "option1",
+      "number": "asdas",
+      "from": "2019-09-04T17:00:00.000Z",
+      "to": "2019-09-03T17:00:00.000Z",
+      "id": 4
+    },
+    {
+      "book": "Ong lao danh ca va con ca vang",
+      "number": "15",
+      "from": "2019-09-10T17:00:00.000Z",
+      "to": "2019-09-16T17:00:00.000Z",
+      "id": 5
+    },
+    {
+      "book": "Ong lao danh ca va con ca vang",
+      "number": "44",
+      "from": "2019-09-09T17:00:00.000Z",
+      "to": "2019-09-01T17:00:00.000Z",
+      "id": 6
+    },
+    {
+      "book": "sadsdfwefwefw",
+      "number": "asdasd",
+      "from": "2019-09-10T17:00:00.000Z",
+      "to": "2019-09-09T17:00:00.000Z",
+      "id": 7
+    },
+    {
+      "book": "Ong lao danh ca va con ca vang",
+      "number": "5598",
+      "from": "2019-09-03T17:00:00.000Z",
+      "to": "2019-09-03T17:00:00.000Z",
+      "id": 8
     }
   ]
 }

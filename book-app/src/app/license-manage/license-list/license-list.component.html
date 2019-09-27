@@ -1,1 +1,41 @@
-<p>license-list works!</p>
+
+
+
+<table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="book">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> book </th>
+        <td mat-cell *matCellDef="let element"> {{element.book}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> number </th>
+        <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+    </ng-container>
+    <ng-container matColumnDef="from">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> start date </th>
+        <td mat-cell *matCellDef="let element"> {{element.from | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="to">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> end date </th>
+        <td mat-cell *matCellDef="let element"> {{element.to | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disabled> Action </th>
+        <td mat-cell *matCellDef="let element"> <a name="" id="" class="btn btn-danger" (click)="deleteBook(element.id)"
+                role="button" mat-raised-button color="warn">Delete</a><a name="" id="" class="btn btn-info"
+                routerLink="../detail/{{element.id}}" role="button" mat-raised-button color="accent">Detail& Edit</a> 
+              
+            </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<a name="" id="" class="btn btn-primary" role="button" mat-stroked-button color="primary" routerLink="../add">Add
+    License</a>

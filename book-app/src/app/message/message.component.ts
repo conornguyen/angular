@@ -21,7 +21,6 @@ export class MessageComponent implements OnInit {
     this.currentMessage = this.messageService.getCurrentMessage();
 
   }
-
   removeMessage(){
     this.messageService.removeMessage(this.currentMessage);
     this.loadCurrentMessage();

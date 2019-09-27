@@ -1,0 +1,52 @@
+<div [hidden]="submitted"  >
+
+    <form [formGroup]="licenseForm" autocomplete="off" novalidate (ngSubmit)="onSubmit()" fxLayout="column wrap"
+        fxLayoutAlign="center center" fxLayoutGap="10px" class="example-form">
+        <mat-card-content>
+
+
+    
+
+
+            <mat-form-field >
+                <mat-label>Select a book</mat-label>
+                <mat-select [(value)]="selected" matInput formControlName="book" id="book" required >
+                    <mat-option value="">Choose one</mat-option>
+                  <mat-option value="{{book.title}}" *ngFor="let book of books">{{book.title}}</mat-option>
+
+                </mat-select>
+                <mat-error *ngIf="hasError('book', 'required')">Book Name is required</mat-error>
+              </mat-form-field>
+              
+              <p>You selected: {{selected}}</p>
+    
+            <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Enter number of license" formControlName="number" id="number" >
+
+              
+                <mat-error *ngIf="hasError('number', 'max')">You have more than 60 characters</mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker" placeholder="Pick date from" formControlName="from" id="from"
+                    readonly (click)="picker.open()" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput [matDatepicker]="picker2" placeholder="Pick date to" formControlName="to" id="to"
+                    readonly (click)="picker2.open()" required>
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <mat-card-actions align="center">
+                <button mat-raised-button color="primary" type="submit" [disabled]="!licenseForm.valid">Create</button>
+
+            </mat-card-actions>
+        </mat-card-actions>
+    </form>
+</div>
+<button type="button" mat-raised-button color="warn" (click)="goBack()">Back to List </button>

@@ -1,6 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a routerLink='book-manage' mat-raised-button>Book Manage</a>
+    <a routerLink='license-manage' mat-raised-button>License Manage</a>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
 <router-outlet></router-outlet>
 
-<p>Admin page works! Click below link to modify Book or License</p>
-
-<a routerLink='book-manage' mat-raised-button color="primary">Book Manage</a>
-<a routerLink='license-manage' mat-raised-button color="primary">License Manage</a>
+<app-message></app-message>
